@@ -220,7 +220,7 @@ input ,textarea {
     }
 }
 
-@media screen and (min-width:400px) and (max-width: 600px) {
+@media screen and (min-width:100px) and (max-width: 600px) {
     .cardParent {
         display: flex;
         margin: 50px 0;
@@ -247,7 +247,7 @@ input ,textarea {
     }
     .card {
         width: 100%;
-        margin-left: 34px;
+        margin: 10px;
     }
     .aboutImg img {
         width: 415px;
