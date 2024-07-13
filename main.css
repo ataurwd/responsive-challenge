@@ -1,0 +1,278 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+h1, a{
+    font-family: "Kanit", sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.btn {
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 10px 33px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+.btn:hover {
+    background: linear-gradient(45deg, #7873f5, #ff6ec4);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* .nav, .header, .mainCard,.about,.contact{
+    background-color: antiquewhite;
+} */
+.card{
+    grid-area: card;
+}
+.nav{
+    grid-area: nav;
+}
+.aboutImg{
+    grid-area: aboutImg;
+}
+.header{
+    grid-area: header;
+}
+.mainCard{
+    grid-area: mainCard;
+}
+.about{
+    grid-area: about;
+}
+.contact{
+    grid-area: contact;
+}
+.container{
+    display: grid;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "header header header header"
+    "mainCard mainCard mainCard mainCard"
+    "about about about about"
+    "contact contact contact contact"
+    ;
+}
+
+.nav {
+    justify-content: space-between;
+    padding: 13px 100px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+nav ul li a {
+    text-decoration: none;
+    padding: 0 21px 30px;
+    font-size: 21px;
+    color: black;
+}
+.navigation{
+    justify-content: space-between;
+}
+
+/* heading section */
+
+.header {
+    text-align: center;
+    padding: 100px 0;
+    background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+    color: white;
+}
+.header p {
+    width: 50%;
+    margin: 15px auto;
+}
+.cardHeading {
+    text-align: center;
+    padding: 30px 0;
+}
+.cardParent {
+    display: flex;
+    margin: 50px 73px;
+    flex-wrap: nowrap;
+}
+.card {
+    grid-area: card;
+    padding: 27px;
+    background: aliceblue;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 8px 8px 7px 0px;
+}
+.card p{
+    margin: 15px 0;
+}
+
+.about {
+    display: flex;
+    margin: 40px 0;
+    padding: 40px 100px;
+    /* width: 100%; */
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+}
+
+.aboutImg img {
+    width: 87%;
+    height: 89%;
+    /* margin-top: -14px; */
+}
+.aboutMain{
+    width: 50%;
+}
+.aboutImg{
+    width: 50%;
+}
+
+.aboutMain h1 {
+    font-size: 52px;
+}
+.aboutMain p {
+    margin: 15px 0;
+    width: 80%;
+    line-height: 19px;
+}
+.aboutMain ul {
+    margin-bottom: 15px;
+}
+.aboutMain ul li {
+    list-style: none;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* contact section */
+
+.contact{
+    display: flex;
+    padding: 0 100px;
+    margin-bottom: 50px;
+}
+.contactDetails{
+    width: 50%;
+}
+.contactDetails p {
+    width: 66%;
+}
+.form{
+    width: 50%;
+}
+input ,textarea {
+    width: 60%;
+    height: 35px;
+}
+
+
+
+@media screen and (min-width: 600px) and (max-width:950px) {
+    .cardParent {
+        display: flex;
+        margin: 50px 77px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .card {
+        grid-area: card;
+        padding: 27px;
+        background: aliceblue;
+        margin: 10px;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 8px 8px 7px 0px;
+        width: 300px;
+    }
+    .aboutImg img {
+        width: 86%;
+        height: 89%;
+        /* margin-top: -14px; */
+        padding-left: 66px;
+    }
+    .contact {
+        display: flex;
+        padding: 0 46px;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width: 600px) {
+    .cardParent {
+        display: flex;
+        margin: 50px 0;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .header p {
+        width: 86%;
+        margin: 15px auto;
+    }
+    .about {
+
+        padding: 40px 10px;
+        flex-direction: column;
+    }
+    .aboutMain {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .aboutMain p {
+        width: 87%;
+        margin: 0 auto;
+    }
+    .card {
+        width: 100%;
+        margin-left: 34px;
+    }
+    .aboutImg img {
+        width: 415px;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .contact {
+        flex-direction: column;
+        padding: 0 10px;
+        background-color: #ff6ec4;
+    }
+    .contactDetails {
+        /* width: 100%; */
+        text-align: left;
+        padding: 24px;
+    }
+    .contactDetails p {
+        padding: 10px 0;
+        width: 154%;
+    }
+    .form {
+        /* width: 100%; */
+        padding: 20px;
+    }
+    .nav {
+        justify-content: space-between;
+        padding: 10px 5px;
+    }
+    nav ul li a {
+        padding: 0 12px 9px;
+    }
+    input, textarea {
+        width: 168%;
+        height: 35px;
+        border: none;
+        border-radius: 7px;
+        gap: 10px;
+    }
+}
