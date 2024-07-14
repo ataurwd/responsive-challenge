@@ -247,12 +247,14 @@ input ,textarea {
     }
     .card {
         width: 100%;
-        margin: 10px;
+        margin: 10px 27px;
     }
     .aboutImg img {
-        width: 415px;
-        height: 100%;
+        width: 100%;
         border-radius: 10px;
+    }
+    .aboutImg {
+        width: 100%;
     }
     .contact {
         flex-direction: column;
@@ -285,5 +287,22 @@ input ,textarea {
         border: none;
         border-radius: 7px;
         gap: 10px;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width: 1024px) {
+    .cardParent {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card {
+        width: 40%;
+    }
+    .aboutImg img {
+        width: 100%;
+        height: 100%;
+    }
+    .contactDetails {
+        width: 66%;
     }
 }
